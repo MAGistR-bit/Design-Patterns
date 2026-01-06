@@ -18,3 +18,33 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
+// Определяем доступные проекты
+val projects = mapOf(
+    "Ducks" to "ducks.DuckTestDrive",
+    "Main" to "Main"
+)
+
+projects.forEach { (name, mainClassName) ->
+    tasks.register<JavaExec>("run$name") {
+        group = "application"
+        description = "Run $name"
+
+        mainClass = mainClassName
+        classpath = sourceSets.main.get().runtimeClasspath
+    }
+}
+
+tasks.withType<JavaExec>().configureEach {
+    jvmArgs(
+        "-Dfile.encoding=UTF-8",
+        "-Dsun.stdout.encoding=UTF-8",
+        "-Dsun.stderr.encoding=UTF-8",
+        "-Dconsole.encoding=UTF-8"
+    )
+}
+
+// Конфигурация компиляции
+tasks.withType<JavaCompile>().configureEach {
+    options.encoding = "UTF-8"
+}
