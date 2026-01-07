@@ -1,5 +1,9 @@
 package ducks.behavior.fly;
 
+/**
+ * @author Mikhail
+ * <p>Реализация поведения для уток, которые умеют летать.</p>
+ */
 public class FlyWithWings implements FlyBehavior {
 
     @Override
