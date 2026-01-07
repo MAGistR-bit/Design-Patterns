@@ -29,4 +29,20 @@ public abstract class Duck {
     public void performQuack() {
         quackBehavior.quack();
     }
+
+    /**
+     * Динамическое изменение поведения полета.
+     * @param fb поведение полета
+     */
+    public void setFlyBehavior(FlyBehavior fb) {
+        flyBehavior = fb;
+    }
+
+    /**
+     * Динамическое изменения поведения кряканья уток.
+     * @param qb поведение кряканья уток.
+     */
+    public void setQuackBehavior(QuackBehavior qb) {
+        quackBehavior = qb;
+    }
 }
