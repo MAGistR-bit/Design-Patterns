@@ -32,3 +32,6 @@ make run-Ducks
 ```bash
 ./gradlew runDucks > example.txt
 ```
+
+### 📥 Упражнения
+* [DuckSimulator](src/main/java/ducks)
