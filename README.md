@@ -33,5 +33,11 @@ make run-Ducks
 ./gradlew runDucks > example.txt
 ```
 
+### ▶️ Модульные тесты
+Для запуска тестов вы можете использовать следующую команду:
+```bash
+make test
+```
+
 ### 📥 Упражнения
 * [DuckSimulator](src/main/java/ducks)
