@@ -7,6 +7,8 @@ import ducks.ModelDuck;
 import ducks.RedheadDuck;
 import ducks.behavior.fly.MockFlyNoWay;
 import ducks.behavior.fly.MockFlyRocketPowered;
+import ducks.behavior.quack.MockMuteQuack;
+import ducks.behavior.quack.MockSqueak;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import output.MockOutputManager;
@@ -15,8 +17,28 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class DuckSimulatorTests {
 
+    @DisplayName(value = "Should pass the tests successfully, when change of quack behavior.")
     @Test
-    void testChangeOfFlyBehavior() {
+    void shouldPassSuccessfullyWhenChangeOfQuackBehavior() {
+        String expectedData = "<<< Silence >>>";
+        String expectedData2 = "Squeak";
+
+        MockOutputManager output = new MockOutputManager();
+
+        Duck redheadDuck = new RedheadDuck();
+        redheadDuck.setQuackBehavior(new MockMuteQuack(output));
+        redheadDuck.performQuack();
+
+        assertThat(output.getPrintInput()).isEqualTo(expectedData);
+
+        redheadDuck.setQuackBehavior(new MockSqueak(output));
+        redheadDuck.performQuack();
+        assertThat(output.getPrintInput()).isEqualTo(expectedData2);
+    }
+
+    @DisplayName(value = "Should pass the tests successfully, when change of fly behavior.")
+    @Test
+    void shouldPassSuccessfullyWhenChangeOfFlyBehavior() {
         String expectedData = "I can't fly!";
         String expectedData2 = "I'm flying with a rocket";
 
@@ -32,9 +54,9 @@ public class DuckSimulatorTests {
         assertThat(output.getPrintInput()).isEqualTo(expectedData2);
     }
 
-    @DisplayName(value = "Should successful tests for the duck flock.")
+    @DisplayName(value = "Should pass successfully, when tests for the duck flock.")
     @Test
-    void testDucksFlock() {
+    void shouldPassSuccessfullyWhenTestDucksFlock() {
         DucksFlock ducksFlock = new DucksFlock();
         Duck mallardDuck = new MallardDuck();
         Duck modelDuck = new ModelDuck();
