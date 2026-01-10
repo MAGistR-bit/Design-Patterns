@@ -1,12 +1,12 @@
-package weatherstation.weather.displays;
+package weatherstation.weather.observers;
 
 import weatherstation.weather.DisplayElement;
 import weatherstation.weather.Observer;
-import weatherstation.weather.WeatherData;
+import weatherstation.weather.subject.WeatherData;
 
 /**
  * @author Mikhail
- * <p>Визуальный элемент (экран) для отображения текущей сводки.</p>
+ * <p>Визуальный элемент (экран) для отображения теплового индекса.</p>
  */
 public class HeatIndexDisplay implements Observer, DisplayElement {
 

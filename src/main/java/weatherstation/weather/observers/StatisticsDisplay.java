@@ -1,8 +1,8 @@
-package weatherstation.weather.displays;
+package weatherstation.weather.observers;
 
 import weatherstation.weather.DisplayElement;
 import weatherstation.weather.Observer;
-import weatherstation.weather.WeatherData;
+import weatherstation.weather.subject.WeatherData;
 
 /**
  * @author Mikhail

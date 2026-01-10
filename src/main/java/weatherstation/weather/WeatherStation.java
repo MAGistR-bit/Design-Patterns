@@ -1,16 +1,24 @@
 package weatherstation.weather;
 
-import weatherstation.weather.displays.ForecastDisplay;
-import weatherstation.weather.displays.StatisticsDisplay;
+import weatherstation.weather.observers.CurrentConditionsDisplay;
+import weatherstation.weather.observers.ForecastDisplay;
+import weatherstation.weather.observers.StatisticsDisplay;
+import weatherstation.weather.subject.WeatherData;
 
 public class WeatherStation {
 
     public static void main(String[] args) {
         WeatherData weatherData = new WeatherData();
 
-        ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
-        StatisticsDisplay statisticsDisplay = new StatisticsDisplay(weatherData);
+        Observer currentConditionsDisplay = new CurrentConditionsDisplay(weatherData);
+        Observer forecastDisplay = new ForecastDisplay(weatherData);
+        Observer statisticsDisplay = new StatisticsDisplay(weatherData);
 
-        System.out.println("Hello World!");
+        weatherData.setMeasurements(80, 65, 30.4f);
+        weatherData.setMeasurements(82, 70, 29.2f);
+        weatherData.setMeasurements(78, 90, 29.2f);
+
+        weatherData.removeObserver(currentConditionsDisplay);
+        weatherData.setMeasurements(62, 90, 29.2f);
     }
 }

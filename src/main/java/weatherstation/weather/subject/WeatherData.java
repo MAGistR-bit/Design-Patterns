@@ -1,4 +1,7 @@
-package weatherstation.weather;
+package weatherstation.weather.subject;
+
+import weatherstation.weather.Observer;
+import weatherstation.weather.Subject;
 
 import java.util.ArrayList;
 import java.util.List;
