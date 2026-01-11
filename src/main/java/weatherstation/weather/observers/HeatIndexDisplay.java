@@ -7,6 +7,9 @@ import weatherstation.weather.subject.WeatherData;
 /**
  * @author Mikhail
  * <p>Визуальный элемент (экран) для отображения теплового индекса.</p>
+ * <b>Тепловым индексом</b> называется показатель эффективной (то есть субъективно
+ * воспринимаемой) температуры, которая вычисляется по значениям температуры T
+ * и относительной влажности RH.
  */
 public class HeatIndexDisplay implements Observer, DisplayElement {
 
