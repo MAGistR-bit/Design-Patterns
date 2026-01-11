@@ -29,7 +29,8 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
     public void update(float temp, float hum, float pressure) {
         this.temperature = temp;
         this.humidity = hum;
-        display();
+
+        display();  // существуют и более элегантные способы для отображения данных
     }
 
     /**

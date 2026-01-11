@@ -6,7 +6,8 @@ import weatherstation.weather.subject.WeatherData;
 
 /**
  * @author Mikhail
- * <p>Визуальный элемент (экран) для отображения прогноза погоды.</p>
+ * <p>Визуальный элемент (экран) для отображения прогноза погоды
+ * по показаниям барометра.</p>
  */
 public class ForecastDisplay implements Observer, DisplayElement {
 

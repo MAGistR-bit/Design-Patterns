@@ -7,6 +7,7 @@ import weatherstation.weather.subject.WeatherData;
 /**
  * @author Mikhail
  * <p>Визуальный элемент (экран) для отображения статистики.</p>
+ * Элемент выводит минимальное, среднее и максимальное значения.
  */
 public class StatisticsDisplay implements Observer, DisplayElement {
 
