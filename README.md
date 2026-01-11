@@ -46,4 +46,5 @@ make test
 
 ### 📥 Упражнения
 * [DuckSimulator](src/main/java/ducks) - паттерн "Стратегия".
-* [WeatherStation](src/main/java/weatherstation)
+* [WeatherStation](src/main/java/weatherstation) - паттерн "Наблюдатель"
+* 
