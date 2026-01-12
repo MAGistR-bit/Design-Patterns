@@ -39,4 +39,24 @@ public class WeatherDataTest {
         assertThat(mockCelsiusDisplay.getData()).isEqualTo(expectedData);
     }
 
+    @DisplayName(value = "Should switch between data, when changing observers dynamically.")
+    @Test
+    void shouldSwitchBetweenDataWhenChangingObserversDynamically() {
+        String dataBeforeSwitchingObserverDynamic = "(" + TEMPERATURE + ", " + HUMIDITY + ")";
+        String dataAfterSwitchingObserverDynamic = "(" + 82.0 + ", " + 70.0 + ")";
+        String celsiusData = "27.777779";
+
+        WeatherData weatherData = new WeatherData();
+
+        MockCurrentConditionDisplay currentConditionsDisplay = new MockCurrentConditionDisplay(weatherData);
+        weatherData.setMeasurements(TEMPERATURE, HUMIDITY, PRESSURE);
+
+        assertThat(currentConditionsDisplay.getData()).isEqualTo(dataBeforeSwitchingObserverDynamic);
+
+        MockCelsiusDisplay celsiusDisplay = new MockCelsiusDisplay(weatherData);
+        weatherData.setMeasurements(82, 70, 29.2f);
+
+        assertThat(currentConditionsDisplay.getData()).isEqualTo(dataAfterSwitchingObserverDynamic);
+        assertThat(celsiusDisplay.getData()).isEqualTo(celsiusData);
+    }
 }
