@@ -4,7 +4,7 @@ import starbuzz.decorator.beverage.Beverage;
 
 /**
  * @author Mikhail
- * <p>Клиент может попросить взбить (whipped) кофе.</p>
+ * <p>Клиент может попросить взбить (whipped) кофе сливками.</p>
  */
 public class Whip extends CondimentDecorator {
 
