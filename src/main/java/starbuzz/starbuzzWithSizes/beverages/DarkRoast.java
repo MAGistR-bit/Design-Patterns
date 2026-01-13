@@ -1,12 +1,15 @@
-package starbuzz.starbuzzWithSizes;
+package starbuzz.starbuzzWithSizes.beverages;
+
+import starbuzz.starbuzzWithSizes.Beverage;
 
 public class DarkRoast extends Beverage {
-	public DarkRoast() {
-		description = "Dark Roast Coffee";
-	}
+    public DarkRoast() {
+        description = "Dark Roast Coffee";
+    }
 
-	public double cost() {
-		return .99;
-	}
+    @Override
+    public double cost() {
+        return .99;
+    }
 }
 

@@ -1,4 +1,6 @@
-package starbuzz.starbuzzWithSizes;
+package starbuzz.starbuzzWithSizes.beverages;
+
+import starbuzz.starbuzzWithSizes.Beverage;
 
 public class Espresso extends Beverage {
 
@@ -6,6 +8,7 @@ public class Espresso extends Beverage {
 		description = "Espresso";
 	}
 
+	@Override
 	public double cost() {
 		return 1.99;
 	}

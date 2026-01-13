@@ -1,5 +1,11 @@
 package starbuzz.starbuzzWithSizes;
 
+import starbuzz.starbuzzWithSizes.beverages.DarkRoast;
+import starbuzz.starbuzzWithSizes.beverages.Espresso;
+import starbuzz.starbuzzWithSizes.beverages.HouseBlend;
+import starbuzz.starbuzzWithSizes.condiments.Mocha;
+import starbuzz.starbuzzWithSizes.condiments.Soy;
+import starbuzz.starbuzzWithSizes.condiments.Whip;
 
 public class StarbuzzCoffee {
 
