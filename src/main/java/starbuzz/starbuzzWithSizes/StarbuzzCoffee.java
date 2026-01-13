@@ -3,7 +3,7 @@ package starbuzz.starbuzzWithSizes;
 
 public class StarbuzzCoffee {
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		Beverage beverage = new Espresso();
 		System.out.println(beverage.getDescription()
 				+ " $" + String.format("%.2f", beverage.cost()));
@@ -16,7 +16,7 @@ public class StarbuzzCoffee {
 				+ " $" + String.format("%.2f", beverage2.cost()));
 
 		Beverage beverage3 = new HouseBlend();
-		beverage3.setSize(Beverage.Size.VENTI);
+		beverage3.setSize(CoffeeSize.VENTI);
 		beverage3 = new Soy(beverage3);
 		beverage3 = new Mocha(beverage3);
 		beverage3 = new Whip(beverage3);

@@ -1,19 +1,19 @@
 package starbuzz.starbuzzWithSizes;
 
 public abstract class Beverage {
-	public enum Size { TALL, GRANDE, VENTI };
-	Size size = Size.TALL;
+
+	CoffeeSize size = CoffeeSize.TALL;
 	String description = "Unknown Beverage";
 
 	public String getDescription() {
 		return description;
 	}
 
-	public void setSize(Size size) {
+	public void setSize(CoffeeSize size) {
 		this.size = size;
 	}
 
-	public Size getSize() {
+	public CoffeeSize getSize() {
 		return this.size;
 	}
 
