@@ -6,7 +6,7 @@ package starbuzz.decorator.beverage;
  */
 public abstract class Beverage {
 
-    protected String description = "Unknown Beverage";
+    protected String description = "Unknown BeverageWithSize";
 
     public String getDescription() {
         return description;

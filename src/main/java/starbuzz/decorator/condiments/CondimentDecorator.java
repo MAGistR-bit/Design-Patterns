@@ -5,7 +5,7 @@ import starbuzz.decorator.beverage.Beverage;
 /**
  * @author Mikhail
  * <p>Абстрактный класс для дополнений.</p>
- * Объекты должны быть взаимозаменяемы с Beverage, поэтому используется наследование.
+ * Объекты должны быть взаимозаменяемы с BeverageWithSize, поэтому используется наследование.
  */
 public abstract class CondimentDecorator extends Beverage {
 
