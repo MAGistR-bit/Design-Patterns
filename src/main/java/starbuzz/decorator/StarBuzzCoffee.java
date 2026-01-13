@@ -2,21 +2,28 @@ package starbuzz.decorator;
 
 import starbuzz.decorator.beverage.Beverage;
 import starbuzz.decorator.beverage.DarkRoast;
-import starbuzz.decorator.condiments.CondimentDecorator;
-import starbuzz.decorator.condiments.Milk;
+import starbuzz.decorator.beverage.Espresso;
+import starbuzz.decorator.beverage.HouseBlend;
 import starbuzz.decorator.condiments.Mocha;
+import starbuzz.decorator.condiments.Soy;
+import starbuzz.decorator.condiments.Whip;
 
 public class StarBuzzCoffee {
 
     public static void main(String[] args) {
+        Beverage espresso = new Espresso();
+        System.out.println(espresso.getDescription() + " $" + espresso.cost());
+
         Beverage darkRoast = new DarkRoast();
-        CondimentDecorator milk = new Milk(darkRoast);
-        CondimentDecorator mocha = new Mocha(milk);
+        darkRoast = new Mocha(darkRoast);
+        darkRoast = new Mocha(darkRoast);
+        darkRoast = new Whip(darkRoast);
+        System.out.println(darkRoast.getDescription() + " $" + darkRoast.cost());
 
-        System.out.println("Description first beverage: " + milk.getDescription());
-        System.out.println("Cost first beverage: " + milk.cost());
-
-        System.out.println("Description second beverage: " + mocha.getDescription());
-        System.out.println("Cost second beverage: " + mocha.cost());
+        Beverage houseBlend = new HouseBlend();
+        houseBlend = new Soy(houseBlend);
+        houseBlend = new Mocha(houseBlend);
+        houseBlend = new Whip(houseBlend);
+        System.out.println(houseBlend.getDescription() + " $" + houseBlend.cost());
     }
 }
