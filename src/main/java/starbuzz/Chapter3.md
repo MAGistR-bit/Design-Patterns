@@ -52,3 +52,12 @@ UML-диаграмма:
 > так что мы можем декорировать объекты динамически и с произвольным
 > количеством декораторов.
 
+### 👑 Декорирование классов в java.io
+
+![Decorator Pattern in Java](diagram/Decorator-In-Java.png)
+
+Пакет java.io в языке Java использует паттерн Декоратор.  
+`ZipInputStream` -> `BufferedInputStream` -> `FileInputStream`.  
+FileInputStream - декорируемый компонент. Библиотека ввода/вывода
+Java предоставляет **базовые компоненты FileInputStream,
+StringBufferInputStream, ByteArrayInputStream**.
