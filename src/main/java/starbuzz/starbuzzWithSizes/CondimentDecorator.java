@@ -5,6 +5,10 @@ public abstract class CondimentDecorator extends Beverage {
 
     public abstract String getDescription();
 
+    /**
+     * Возвращает объем напитка ({@link CoffeeSize}) для декораторов.
+     * @return объем напитка
+     */
     public CoffeeSize getSize() {
         return beverage.getSize();
     }
