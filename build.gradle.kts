@@ -23,7 +23,8 @@ tasks.test {
 // Определяем доступные проекты
 val projects = mapOf(
     "Ducks" to "ducks.DuckTestDrive",
-    "WeatherStation" to "weatherstation.weather.WeatherStation"
+    "WeatherStation" to "weatherstation.weather.WeatherStation",
+    "StarBuzz" to "starbuzz.decorator.StarBuzzCoffee"
 )
 
 projects.forEach { (name, mainClassName) ->
