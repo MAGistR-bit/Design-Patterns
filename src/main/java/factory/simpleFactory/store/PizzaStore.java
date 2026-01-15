@@ -3,6 +3,10 @@ package factory.simpleFactory.store;
 import factory.simpleFactory.Pizza;
 import factory.simpleFactory.factory.SimplePizzaFactory;
 
+/**
+ * @author Mikhail
+ * <p>Пиццерия.</p>
+ */
 public class PizzaStore {
 
     private final SimplePizzaFactory factory;
