@@ -1,6 +1,6 @@
-package factory.concretePizza;
+package factory.simpleFactory.concretePizza;
 
-import factory.Pizza;
+import factory.simpleFactory.Pizza;
 
 public class CheesePizza extends Pizza {
 
