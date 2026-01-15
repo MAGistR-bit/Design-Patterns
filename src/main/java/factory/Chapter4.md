@@ -28,3 +28,32 @@ if (picnic) {
 в том, что нужно добавить (или удалить). Часто подобный код размещается
 в разных частях приложения, что основательно затрудняет его сопровождение
 и обновление.
+
+Итак, следует выделить представленный выше код в объект,
+который занимается только созданием уток и ничем более.
+Если другому объекту понадобится создать экземпляр утки,
+то он обратится к нему с запросом.
+
+**У нового объекта имеется подходящее имя: Фабрика.**  
+Фабрика инкапсулирует подробности создания объектов.  
+Пример:
+```java
+public class SimplePizzaFactory {
+
+    public Pizza createPizza(String type) {
+        Pizza pizza = null;
+
+        if (type.equals("cheese")) {
+            pizza = new CheesePizza();
+        } else if (type.equals("pepperoni")) {
+            pizza = new PepperoniPizza();
+        } else if (type.equals("clam")) {
+            pizza = new ClamPizza();
+        } else {
+            throw new IllegalArgumentException("Invalid pizza type");
+        }
+        
+        return pizza;
+    }
+}
+```
