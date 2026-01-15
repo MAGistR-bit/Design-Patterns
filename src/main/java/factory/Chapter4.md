@@ -73,3 +73,22 @@ public class SimplePizzaFactory {
 > словом implements в объявлении."__ _В более общем смысле
 > реализация конкретным классом метода супертипа (класса ИЛИ интерфейса)
 > считается_ **_"реализацией интерфейса"_** _этого супертипа_.
+
+### 📌 Еще один способ реализации
+Заменим `SimplePizzaFactory` тремя разными фабриками:
+`NYPizzaFactory`, `ChicagoPizzaFactory`, `CaliforniaPizzaFactory`.
+
+Код будет выглядеть примерно так:
+
+```java
+import factory.simpleFactory.store.PizzaStore;
+
+NYPizzaFactory nyFactory = new NYPizzaFactory();
+PizzaStore nyStore = new PizzaStore(nyFactory);
+nyStore.orderPizza("Veggie");
+
+ChicagoPizzaFactory chicagoFactory = new ChicagoPizzaFactory();
+PizzaStore chicagoStore = new PizzaStore(chicagoFactory);
+chicagoStore.orderPizza("Veggie");
+```
+
