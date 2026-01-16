@@ -14,9 +14,13 @@ public class Main {
         System.out.println("Ethan ordered a " + pizza.getName() + "\n");
 
         pizza = chicagoStore.orderPizza("pepperoni");
-        System.out.println("Joel are ordered a " + pizza.getName() + "\n");
+        System.out.println("Joel ordered a " + pizza.getName() + "\n");
 
         pizza = argentinianStore.orderPizza("fugazzetta");
-        System.out.println("Oksana are ordered a " + pizza.getName());
+        System.out.println("Oksana is ordered a " + pizza.getName() + "\n");
+
+        DependentPizzaStore pizzaStore = new DependentPizzaStore();
+        Pizza dependentPizza = pizzaStore.createPizza("NY", "cheese");
+        System.out.println("James is ordered a " + dependentPizza.getName() + "\n");
     }
 }
