@@ -1,6 +1,6 @@
-package factory.abstractFactory.stylePizzas.ny;
+package factory.factoryMethod.stylePizzas.ny;
 
-import factory.abstractFactory.Pizza;
+import factory.factoryMethod.Pizza;
 
 /**
  * @author Mikhail

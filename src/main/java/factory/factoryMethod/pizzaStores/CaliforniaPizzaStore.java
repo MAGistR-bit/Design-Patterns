@@ -1,7 +1,7 @@
-package factory.abstractFactory.pizzaStores;
+package factory.factoryMethod.pizzaStores;
 
-import factory.abstractFactory.Pizza;
-import factory.abstractFactory.PizzaStore;
+import factory.factoryMethod.Pizza;
+import factory.factoryMethod.PizzaStore;
 
 /**
  * @author Mikhail

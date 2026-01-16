@@ -1,10 +1,10 @@
-package factory.abstractFactory.pizzaStores;
+package factory.factoryMethod.pizzaStores;
 
-import factory.abstractFactory.Pizza;
-import factory.abstractFactory.PizzaStore;
-import factory.abstractFactory.stylePizzas.ny.NYStyleCheesePizza;
-import factory.abstractFactory.stylePizzas.ny.NYStyleClamPizza;
-import factory.abstractFactory.stylePizzas.ny.NYStyleVeggiePizza;
+import factory.factoryMethod.Pizza;
+import factory.factoryMethod.PizzaStore;
+import factory.factoryMethod.stylePizzas.ny.NYStyleCheesePizza;
+import factory.factoryMethod.stylePizzas.ny.NYStyleClamPizza;
+import factory.factoryMethod.stylePizzas.ny.NYStyleVeggiePizza;
 
 /**
  * @author Mikhail

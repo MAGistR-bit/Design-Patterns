@@ -92,3 +92,12 @@ PizzaStore chicagoStore = new PizzaStore(chicagoFactory);
 chicagoStore.orderPizza("Veggie");
 ```
 
+### 👾 Фабричный метод
+
+![Factory Method Description](diagram/Explain-Pattern.png)
+
+Когда `orderPizza()` вызывает `createPizza()`, управление
+передается одному из субклассов. Какая именно из конкретных
+разновидностей пиццы будет создана? Это зависит от типа
+пиццерии: `NYStylePizzaStore` или `ChicagoStylePizzaStore`.
+

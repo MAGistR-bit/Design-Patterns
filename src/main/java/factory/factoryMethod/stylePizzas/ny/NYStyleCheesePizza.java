@@ -1,10 +1,10 @@
-package factory.abstractFactory.stylePizzas.ny;
+package factory.factoryMethod.stylePizzas.ny;
 
-import factory.abstractFactory.Pizza;
+import factory.factoryMethod.Pizza;
 
 /**
  * @author Mikhail
- * <p>Пицца с сыром, приготовленная ньюйорксом стиле.</p>
+ * <p>Пицца с сыром, приготовленная в региональном (нью-йоркском) стиле.</p>
  */
 public class NYStyleCheesePizza extends Pizza {
 
