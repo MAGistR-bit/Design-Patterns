@@ -24,7 +24,8 @@ tasks.test {
 val projects = mapOf(
     "Ducks" to "ducks.DuckTestDrive",
     "WeatherStation" to "weatherstation.weather.WeatherStation",
-    "StarBuzz" to "starbuzz.decorator.StarBuzzCoffee"
+    "StarBuzz" to "starbuzz.decorator.StarBuzzCoffee",
+    "PizzaStore" to "factory.factoryMethod.Main"
 )
 
 projects.forEach { (name, mainClassName) ->
