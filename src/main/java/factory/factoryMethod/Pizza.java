@@ -15,27 +15,33 @@ public abstract class Pizza {
      */
     public void prepare() {
         System.out.println("Preparing " + name);
+        System.out.println("Tossing dough... ");
+        System.out.println("Adding sauce... ");
+        System.out.println("Adding toppings: ");
+        for (String topping : toppings) {
+            System.out.println("   " + topping);
+        }
     }
 
     /**
      * Отображает сообщение, говорящее о том, что пицца выпекается.
      */
     public void bake() {
-        System.out.println("Baking " + name);
+        System.out.println("Bake for 25 minutes at 350.");
     }
 
     /**
      * Отображает сообщение, говорящее о том, что пицца нарезается.
      */
     public void cut() {
-        System.out.println("Cutting " + name);
+        System.out.println("Cutting the pizza into diagonal slices.");
     }
 
     /**
      * Отображает сообщение, говорящее о том, что пицца упаковывается в коробку.
      */
     public void box() {
-        System.out.println("Boxing " + name);
+        System.out.println("Place pizza in official PizzaStore box.");
     }
 
     public String getName() {

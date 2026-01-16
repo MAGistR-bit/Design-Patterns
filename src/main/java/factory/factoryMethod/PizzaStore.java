@@ -25,5 +25,5 @@ public abstract class PizzaStore {
      * @param type тип пиццы, которую необходимо приготовить
      * @return приготовленная пицца
      */
-    public abstract Pizza createPizza(String type);
+    protected abstract Pizza createPizza(String type);
 }
