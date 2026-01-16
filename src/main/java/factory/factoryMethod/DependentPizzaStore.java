@@ -8,6 +8,14 @@ import factory.factoryMethod.stylePizzas.ny.NYStyleCheesePizza;
 import factory.factoryMethod.stylePizzas.ny.NYStyleClamPizza;
 import factory.factoryMethod.stylePizzas.ny.NYStyleVeggiePizza;
 
+/**
+ * @author Mikhail
+ * <p>Этот вариант является плохим, поскольку модуль
+ * верхнего уровня <code>PizzaStore</code> зависит от
+ * модулей нижнего уровня (конкретных видов пиццы).</p>
+ * Мы должны зависеть от абстракций, а не от конкретных классов.
+ * На помощь приходит Фабричный Метод.
+ */
 public class DependentPizzaStore {
 
     public Pizza createPizza(String style, String type) {
