@@ -1,11 +1,11 @@
 package factory.abstractFactory;
 
-import factory.abstractFactory.ingredients.Cheese;
-import factory.abstractFactory.ingredients.Clams;
-import factory.abstractFactory.ingredients.Dough;
-import factory.abstractFactory.ingredients.Pepperoni;
-import factory.abstractFactory.ingredients.Sauce;
-import factory.abstractFactory.ingredients.Veggies;
+import factory.abstractFactory.ingredients.cheese.Cheese;
+import factory.abstractFactory.ingredients.clams.Clams;
+import factory.abstractFactory.ingredients.dough.Dough;
+import factory.abstractFactory.ingredients.pepperoni.Pepperoni;
+import factory.abstractFactory.ingredients.sauce.Sauce;
+import factory.abstractFactory.ingredients.veggie.Veggies;
 
 /**
  * @author Mikhail
