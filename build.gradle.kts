@@ -25,7 +25,8 @@ val projects = mapOf(
     "Ducks" to "ducks.DuckTestDrive",
     "WeatherStation" to "weatherstation.weather.WeatherStation",
     "StarBuzz" to "starbuzz.decorator.StarBuzzCoffee",
-    "PizzaStore" to "factory.factoryMethod.Main"
+    "PizzaStore" to "factory.factoryMethod.Main",
+     "StartupAbstractFactory" to "factory.abstractFactory.StartupAbstractFactory"
 )
 
 projects.forEach { (name, mainClassName) ->
