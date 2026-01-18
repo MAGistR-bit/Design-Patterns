@@ -45,21 +45,43 @@ public abstract class Pizza {
 
     /**
      * Отображает описание пиццы.
+     *
      * @return описание пиццы
      */
     @Override
     public String toString() {
-        StringBuilder display = new StringBuilder();
-        display.append("---- ").append(name).append(" ----\n");
-        display.append(dough).append("\n");
-        display.append(sauce).append("\n");
-        display.append(clam).append("\n");
-        display.append(pepperoni).append("\n");
-        display.append(cheese).append("\n");
+        StringBuilder result = new StringBuilder();
+        result.append("---- ").append(name).append(" ----\n");
 
-        for (Veggies veggie : veggies) {
-            display.append(veggie).append("\n");
+        if (dough != null) {
+            result.append(dough);
+            result.append("\n");
         }
-        return display.toString();
+        if (sauce != null) {
+            result.append(sauce);
+            result.append("\n");
+        }
+        if (cheese != null) {
+            result.append(cheese);
+            result.append("\n");
+        }
+        if (veggies != null) {
+            for (int i = 0; i < veggies.length; i++) {
+                result.append(veggies[i]);
+                if (i < veggies.length - 1) {
+                    result.append(", ");
+                }
+            }
+            result.append("\n");
+        }
+        if (clam != null) {
+            result.append(clam);
+            result.append("\n");
+        }
+        if (pepperoni != null) {
+            result.append(pepperoni);
+            result.append("\n");
+        }
+        return result.toString();
     }
 }
