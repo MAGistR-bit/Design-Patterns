@@ -6,13 +6,13 @@ import factory.abstractFactory.ingredients.cheese.MozzarellaCheese;
 import factory.abstractFactory.ingredients.clams.Clams;
 import factory.abstractFactory.ingredients.clams.FrozenClams;
 import factory.abstractFactory.ingredients.dough.Dough;
-import factory.abstractFactory.ingredients.dough.ThinCrustDough;
+import factory.abstractFactory.ingredients.dough.ThickCrustDough;
 import factory.abstractFactory.ingredients.pepperoni.Pepperoni;
 import factory.abstractFactory.ingredients.pepperoni.SlicedPepperoni;
 import factory.abstractFactory.ingredients.sauce.PlumTomatoSauce;
 import factory.abstractFactory.ingredients.sauce.Sauce;
 import factory.abstractFactory.ingredients.veggie.BlackOlives;
-import factory.abstractFactory.ingredients.veggie.EggPlant;
+import factory.abstractFactory.ingredients.veggie.Eggplant;
 import factory.abstractFactory.ingredients.veggie.Spinach;
 import factory.abstractFactory.ingredients.veggie.Veggies;
 
@@ -24,7 +24,7 @@ public class ChicagoIngredientFactory implements PizzaIngredientFactory {
 
     @Override
     public Dough createDough() {
-        return new ThinCrustDough();
+        return new ThickCrustDough();
     }
 
     @Override
@@ -39,7 +39,7 @@ public class ChicagoIngredientFactory implements PizzaIngredientFactory {
 
     @Override
     public Veggies[] createVeggies() {
-        return new Veggies[]{new Spinach(), new BlackOlives(), new EggPlant()};
+        return new Veggies[]{new Spinach(), new BlackOlives(), new Eggplant()};
     }
 
     @Override
