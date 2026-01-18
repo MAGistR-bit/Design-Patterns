@@ -1,6 +1,6 @@
 package factory.abstractFactory.ingredients.veggie;
 
-public class EggPlant extends Veggies {
+public class Eggplant extends Veggies {
 
     @Override
     public String toString() {
