@@ -2,12 +2,11 @@ package factory.abstractFactory.pizza;
 
 import factory.abstractFactory.PizzaIngredientFactory;
 
-public class ClamPizza extends Pizza {
+public class VeggiePizza extends Pizza {
 
     private final PizzaIngredientFactory ingredientFactory;
 
-    public ClamPizza(PizzaIngredientFactory ingredientFactory) {
-        name = "Clam Pizza";
+    public VeggiePizza(PizzaIngredientFactory ingredientFactory) {
         this.ingredientFactory = ingredientFactory;
     }
 
@@ -17,6 +16,6 @@ public class ClamPizza extends Pizza {
         dough = ingredientFactory.createDough();
         sauce = ingredientFactory.createSauce();
         cheese = ingredientFactory.createCheese();
-        clam = ingredientFactory.createClams();
+        veggies = ingredientFactory.createVeggies();
     }
 }

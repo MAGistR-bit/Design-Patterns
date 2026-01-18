@@ -21,17 +21,17 @@ public abstract class Pizza {
      * Подготавливает ингредиенты, необходимые
      * для приготовления пиццы.
      */
-    abstract void prepare();
+    public abstract void prepare();
 
-    void bake() {
+    public void bake() {
         System.out.println("Bake for 25 minutes at 350");
     }
 
-    void cut() {
+    public void cut() {
         System.out.println("Cutting the pizza into diagonal slices");
     }
 
-    void box() {
+    public void box() {
         System.out.println("Place Pizza in official PizzaStore box");
     }
 

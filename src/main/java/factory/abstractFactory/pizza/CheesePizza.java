@@ -22,7 +22,7 @@ public class CheesePizza extends Pizza {
      * ингредиент, он запрашивает его у фабрики.
      */
     @Override
-    void prepare() {
+    public void prepare() {
         System.out.println("Preparing " + name);
         dough = ingredientFactory.createDough();
         sauce = ingredientFactory.createSauce();
