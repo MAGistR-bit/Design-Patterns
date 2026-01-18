@@ -1,13 +1,19 @@
 package factory.abstractFactory;
 
 import factory.abstractFactory.pizza.Pizza;
+import factory.abstractFactory.stores.ChicagoPizzaStore;
 import factory.abstractFactory.stores.NYPizzaStore;
 import factory.abstractFactory.stores.PizzaStore;
 
 public class StartupAbstractFactory {
     public static void main(String[] args) {
         PizzaStore nyPizzaStore = new NYPizzaStore();
+        PizzaStore chicagoPizzaStore = new ChicagoPizzaStore();
+
         Pizza pizza = nyPizzaStore.orderPizza("cheese");
-        System.out.println(pizza);
+        System.out.println("Ethan ordered a " + pizza + "\n");
+
+        pizza = chicagoPizzaStore.orderPizza("pepperoni");
+        System.out.println("Joel ordered a " + pizza + "\n");
     }
 }
