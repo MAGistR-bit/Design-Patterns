@@ -1,6 +1,6 @@
 package singleton;
 
-public class Singleton {
+public final class Singleton {
 
     private Singleton() {
 
