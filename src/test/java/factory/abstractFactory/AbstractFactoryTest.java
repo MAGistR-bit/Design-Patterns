@@ -18,7 +18,9 @@ class AbstractFactoryTest {
     @DisplayName(value = "Should return an actual pizza name, when order pizza with abstract factory.")
     @ParameterizedTest
     @MethodSource(value = "abstractFactoryMethodPizzaProvider")
-    void shouldReturnActualPizzaNameWhenOrderPizzaWithAbstractFactory(PizzaStore pizzaStore, String pizzaType, String expectedPizzaName) {
+    void shouldReturnActualPizzaNameWhenOrderPizzaWithAbstractFactory(PizzaStore pizzaStore,
+                                                                      String pizzaType,
+                                                                      String expectedPizzaName) {
         Pizza pizza = pizzaStore.orderPizza(pizzaType);
         assertThat(pizza.getName()).isEqualTo(expectedPizzaName);
     }
@@ -32,5 +34,4 @@ class AbstractFactoryTest {
                 Arguments.of(new NYPizzaStore(), "clam", "New York Style Clam Pizza")
         );
     }
-
 }
