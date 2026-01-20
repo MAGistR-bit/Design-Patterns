@@ -19,6 +19,11 @@ public final class ChocolateBoiler {
         return boiled;
     }
 
+    /**
+     * Создает экземпляр, если он еще не существует (отложенное создание экземпляра).
+     *
+     * @return ссылка на единственный экземпляр.
+     */
     public static ChocolateBoiler getInstance() {
         if (uniqueInstance == null) {
             System.out.println("Creating unique instance of Chocolate Boiler");
