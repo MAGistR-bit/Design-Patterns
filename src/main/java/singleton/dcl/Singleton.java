@@ -3,6 +3,7 @@ package singleton.dcl;
 /**
  * @author Mikhail
  * <p>Реализация паттерна Singleton при помощи Double Check Locking.</p>
+ * <b>Danger! This implementation of Singleton not guaranteed to work prior to Java 5.</b>
  */
 public final class Singleton {
 
