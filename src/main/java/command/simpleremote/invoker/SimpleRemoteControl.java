@@ -10,7 +10,9 @@ public class SimpleRemoteControl {
 
     private Command slot;
 
-    public SimpleRemoteControl() {}
+    public SimpleRemoteControl() {
+
+    }
 
     public void setCommand(Command command) {
         this.slot = command;
