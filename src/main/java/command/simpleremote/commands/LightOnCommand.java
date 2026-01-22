@@ -1,8 +1,12 @@
 package command.simpleremote.commands;
 
-import command.Command;
-import command.Light;
+import command.simpleremote.Command;
+import command.simpleremote.Light;
 
+/**
+ * @author Mikhail
+ * <p>Реализация команды для включения света.</p>
+ */
 public class LightOnCommand implements Command {
 
     private final Light light;
@@ -11,6 +15,9 @@ public class LightOnCommand implements Command {
         this.light = light;
     }
 
+    /**
+     * Метод объекта-получателя для включения света.
+     */
     @Override
     public void execute() {
         light.on();

@@ -1,7 +1,7 @@
 package command.simpleremote.commands;
 
-import command.Command;
-import command.Light;
+import command.simpleremote.Command;
+import command.simpleremote.Light;
 
 public class LightOffCommand implements Command {
 

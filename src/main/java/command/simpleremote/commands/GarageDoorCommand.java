@@ -1,7 +1,7 @@
 package command.simpleremote.commands;
 
-import command.Command;
-import command.GarageDoor;
+import command.simpleremote.Command;
+import command.simpleremote.GarageDoor;
 
 public class GarageDoorCommand implements Command {
 

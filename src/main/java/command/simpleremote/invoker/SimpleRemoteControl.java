@@ -1,6 +1,6 @@
 package command.simpleremote.invoker;
 
-import command.Command;
+import command.simpleremote.Command;
 
 /**
  * @author Mikhail
@@ -14,10 +14,17 @@ public class SimpleRemoteControl {
 
     }
 
+    /**
+     * Назначает команду для исполнения.
+     * @param command команда
+     */
     public void setCommand(Command command) {
         this.slot = command;
     }
 
+    /**
+     * Метод, который вызывается при нажатии кнопки.
+     */
     public void buttonWasPressed() {
         slot.execute();
     }
