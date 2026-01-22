@@ -8,6 +8,8 @@ public class RemoteControlTest {
 
     public static void main(String[] args) {
         SimpleRemoteControl remote = new SimpleRemoteControl();
+
+        // Получатели запроса
         GarageDoor garageDoor = new GarageDoor();
         Light light = new Light();
 
