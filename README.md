@@ -26,6 +26,7 @@ ___
 **_Поведенческие (Behavioral Patterns):_**
 1) Стратегия (Strategy).
 2) Наблюдатель (Observer).
+3) Команда (Command).
 
 **_Структурные (Structural Patterns):_**
 1) Декоратор (Decorator).
