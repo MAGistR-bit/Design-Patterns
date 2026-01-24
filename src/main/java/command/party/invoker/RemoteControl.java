@@ -1,4 +1,7 @@
-package command.party;
+package command.party.invoker;
+
+import command.party.Command;
+import command.party.NoCommand;
 
 /**
  * @author Mikhail
@@ -60,8 +63,8 @@ public class RemoteControl {
      */
     @Override
     public String toString() {
-        StringBuffer buffer = new StringBuffer();
-        buffer.append("\n----Remote Control----\n");
+        StringBuilder buffer = new StringBuilder();
+        buffer.append("\n---- Remote Control ----\n");
         for (int i = 0; i < 7; i++) {
             buffer.append("[slot ").append(i).append("]: ")
                     .append(onCommands[i].getClass().getName())
