@@ -81,8 +81,7 @@ public class RemoteControl {
                     .append(onCommands[i].getClass().getName())
                     .append("   ")
                     .append(offCommands[i].getClass().getName())
-                    .append("\n")
-            ;
+                    .append("\n");
         }
         buffer.append("[undo] ").append(undoCommand.getClass().getName()).append("\n");
         return buffer.toString();
