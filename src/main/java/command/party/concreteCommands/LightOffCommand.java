@@ -19,4 +19,12 @@ public class LightOffCommand implements Command {
     public void execute() {
         light.off();
     }
+
+    /**
+     * Включает выключенный свет.
+     */
+    @Override
+    public void undo() {
+        light.on();
+    }
 }

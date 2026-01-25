@@ -19,4 +19,12 @@ public class LightOnCommand implements Command {
     public void execute() {
         light.on();
     }
+
+    /**
+     * Отменяет выполнение последней команды.
+     */
+    @Override
+    public void undo() {
+        light.off();
+    }
 }
