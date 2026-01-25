@@ -11,6 +11,7 @@ import command.party.NoCommand;
 public class RemoteControl {
     Command[] onCommands;
     Command[] offCommands;
+    Command undoCommand;
 
     /**
      * Конструктор, который создает экземпляры
@@ -25,6 +26,7 @@ public class RemoteControl {
             onCommands[i] = noCommand;
             offCommands[i] = noCommand;
         }
+        undoCommand = noCommand;
     }
 
     /**
@@ -46,6 +48,7 @@ public class RemoteControl {
      */
     public void onButtonWasPushed(int slot) {
         onCommands[slot].execute();
+        undoCommand = onCommands[slot];
     }
 
     /**
@@ -55,6 +58,14 @@ public class RemoteControl {
      */
     public void offButtonWasPushed(int slot) {
         offCommands[slot].execute();
+        undoCommand = offCommands[slot];
+    }
+
+    /**
+     * Отменяет операцию последней выполненной команды.
+     */
+    public void undoButtonWasPushed() {
+        undoCommand.undo();
     }
 
     /**
@@ -65,13 +76,15 @@ public class RemoteControl {
     public String toString() {
         StringBuilder buffer = new StringBuilder();
         buffer.append("\n---- Remote Control ----\n");
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < onCommands.length; i++) {
             buffer.append("[slot ").append(i).append("]: ")
                     .append(onCommands[i].getClass().getName())
                     .append("   ")
                     .append(offCommands[i].getClass().getName())
-                    .append("\n");
+                    .append("\n")
+            ;
         }
+        buffer.append("[undo] ").append(undoCommand.getClass().getName()).append("\n");
         return buffer.toString();
     }
 }

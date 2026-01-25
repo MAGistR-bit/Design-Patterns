@@ -4,6 +4,8 @@ import command.party.concreteCommands.CeilingFanHighCommand;
 import command.party.concreteCommands.CeilingFanOffCommand;
 import command.party.concreteCommands.LightOffCommand;
 import command.party.concreteCommands.LightOnCommand;
+import command.party.concreteCommands.StereoOffCommand;
+import command.party.concreteCommands.StereoOnWithCDCommand;
 import command.party.invoker.RemoteControl;
 import command.party.receiver.CeilingFan;
 import command.party.receiver.Light;
@@ -27,21 +29,28 @@ public class RemoteLoader {
         CeilingFanHighCommand ceilingFanOn = new CeilingFanHighCommand(ceilingFan);
         CeilingFanOffCommand ceilingFanOff = new CeilingFanOffCommand(ceilingFan);
 
+        StereoOnWithCDCommand stereoOnWithCD = new StereoOnWithCDCommand(stereo);
+        StereoOffCommand stereoOff = new StereoOffCommand(stereo);
+
         remoteControl.setCommand(0, livingRoomLightOn, livingRoomLightOff);
         remoteControl.setCommand(1, kitchenLightOn, kitchenLightOff);
 
-        remoteControl.setCommand(2, stereo::on, stereo::off);
+        remoteControl.setCommand(2, stereoOnWithCD, stereoOff);
         remoteControl.setCommand(3, ceilingFanOn, ceilingFanOff);
 
         System.out.println(remoteControl);
 
         remoteControl.onButtonWasPushed(0);
         remoteControl.offButtonWasPushed(0);
+        remoteControl.undoButtonWasPushed();
+
         remoteControl.onButtonWasPushed(1);
         remoteControl.offButtonWasPushed(1);
         remoteControl.onButtonWasPushed(2);
         remoteControl.offButtonWasPushed(2);
+
         remoteControl.onButtonWasPushed(3);
         remoteControl.offButtonWasPushed(3);
+        remoteControl.undoButtonWasPushed();
     }
 }

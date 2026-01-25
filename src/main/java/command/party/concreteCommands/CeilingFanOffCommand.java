@@ -2,6 +2,7 @@ package command.party.concreteCommands;
 
 import command.party.Command;
 import command.party.receiver.CeilingFan;
+import command.utils.ChangeSpeedFanUtil;
 
 public class CeilingFanOffCommand implements Command {
 
@@ -16,5 +17,10 @@ public class CeilingFanOffCommand implements Command {
     public void execute() {
         prevSpeed = ceilingFan.getSpeed();
         ceilingFan.off();
+    }
+
+    @Override
+    public void undo() {
+        ChangeSpeedFanUtil.changeSpeed(prevSpeed, ceilingFan);
     }
 }

@@ -3,6 +3,8 @@ package command.party.concreteCommands;
 import command.party.Command;
 import command.party.receiver.CeilingFan;
 
+import static command.utils.ChangeSpeedFanUtil.changeSpeed;
+
 public class CeilingFanMediumCommand implements Command {
 
     private final CeilingFan ceilingFan;
@@ -17,4 +19,10 @@ public class CeilingFanMediumCommand implements Command {
         prevSpeed = ceilingFan.getSpeed();
         ceilingFan.medium();
     }
+
+    @Override
+    public void undo() {
+        changeSpeed(prevSpeed, ceilingFan);
+    }
+
 }

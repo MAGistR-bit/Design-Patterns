@@ -6,10 +6,10 @@ package command.party.receiver;
  */
 public class CeilingFan {
 
-    private static final int HIGH = 3;
-    private static final int MEDIUM = 2;
-    private static final int LOW = 1;
-    private static final int OFF = 0;
+    public static final int HIGH = 3;
+    public static final int MEDIUM = 2;
+    public static final int LOW = 1;
+    public static final int OFF = 0;
 
     private String location;
     private int speed;
@@ -42,5 +42,4 @@ public class CeilingFan {
     public int getSpeed() {
         return speed;
     }
-
 }
