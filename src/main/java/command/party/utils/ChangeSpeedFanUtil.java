@@ -1,4 +1,4 @@
-package command.utils;
+package command.party.utils;
 
 import command.party.receiver.CeilingFan;
 

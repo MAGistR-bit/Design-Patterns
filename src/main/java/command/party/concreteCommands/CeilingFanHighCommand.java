@@ -3,7 +3,7 @@ package command.party.concreteCommands;
 import command.party.Command;
 import command.party.receiver.CeilingFan;
 
-import static command.utils.ChangeSpeedFanUtil.changeSpeed;
+import static command.party.utils.ChangeSpeedFanUtil.changeSpeed;
 
 public class CeilingFanHighCommand implements Command {
 

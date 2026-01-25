@@ -2,7 +2,7 @@ package command.party.concreteCommands;
 
 import command.party.Command;
 import command.party.receiver.CeilingFan;
-import command.utils.ChangeSpeedFanUtil;
+import command.party.utils.ChangeSpeedFanUtil;
 
 public class CeilingFanOffCommand implements Command {
 
