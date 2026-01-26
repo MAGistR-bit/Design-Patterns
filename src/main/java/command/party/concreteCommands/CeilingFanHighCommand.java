@@ -8,6 +8,10 @@ import static command.party.utils.ChangeSpeedFanUtil.changeSpeed;
 public class CeilingFanHighCommand implements Command {
 
     private final CeilingFan ceilingFan;
+
+    /**
+     * Предыдущая скорость вентилятора.
+     */
     private int prevSpeed;
 
     public CeilingFanHighCommand(CeilingFan ceilingFan) {
