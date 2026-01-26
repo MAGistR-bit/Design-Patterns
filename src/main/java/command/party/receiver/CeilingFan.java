@@ -12,10 +12,15 @@ public class CeilingFan {
     public static final int OFF = 0;
 
     private String location;
+
+    /**
+     * Скорость вращения вентилятора.
+     */
     private int speed;
 
     public CeilingFan(String location) {
         this.location = location;
+        speed = OFF;
     }
 
     public void high() {
@@ -39,6 +44,10 @@ public class CeilingFan {
         System.out.println(location + " ceiling fan is on off.");
     }
 
+    /**
+     * Получение текущей скорости вентилятора.
+     * @return скорость вентилятора
+     */
     public int getSpeed() {
         return speed;
     }
