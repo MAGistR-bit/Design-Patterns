@@ -4,8 +4,13 @@ import command.party.receiver.CeilingFan;
 
 public class ChangeSpeedFanUtil {
 
-    public static void changeSpeed(int prevSpeed, CeilingFan ceilingFan) {
-        switch (prevSpeed) {
+    /**
+     * Изменяет скорость вращения вентилятора.
+     * @param speed скорость вращения
+     * @param ceilingFan вентилятор, для которого необходимо отрегулировать скорость вращения
+     */
+    public static void changeSpeed(int speed, CeilingFan ceilingFan) {
+        switch (speed) {
             case CeilingFan.LOW:
                 ceilingFan.low();
                 break;
