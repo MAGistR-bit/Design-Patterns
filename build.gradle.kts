@@ -28,7 +28,8 @@ val projects = mapOf(
     "PizzaStore" to "factory.factoryMethod.Main",
     "StartupAbstractFactory" to "factory.abstractFactory.StartupAbstractFactory",
     "Singleton" to "singleton.enumSingleton.SingletonClient",
-    "RemoteControl" to "command.simpleremote.RemoteControlTest"
+    "RemoteControl" to "command.simpleremote.RemoteControlTest",
+    "PartyRemoteControl" to "command.party.RemoteLoader"
 )
 
 projects.forEach { (name, mainClassName) ->
