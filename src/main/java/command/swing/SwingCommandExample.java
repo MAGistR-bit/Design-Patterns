@@ -8,12 +8,12 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class SwingObserverExample {
+public class SwingCommandExample {
     private JFrame frame;
     private JPanel panel;
 
     public static void main(String[] args) {
-        SwingObserverExample example = new SwingObserverExample();
+        SwingCommandExample example = new SwingCommandExample();
         example.go();
     }
 
