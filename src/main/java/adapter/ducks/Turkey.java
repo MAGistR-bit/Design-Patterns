@@ -1,4 +1,4 @@
-package adapter;
+package adapter.ducks;
 
 public interface Turkey {
     void gobble();
