@@ -3,7 +3,7 @@ package adapter.ducks;
 import adapter.ducks.concreteDuck.MallardDuck;
 import adapter.ducks.concreteTurkey.WildTurkey;
 
-public class TestDriveAdapter {
+public class TurkeyTestDrive {
     public static void main(String[] args) {
         Duck mallardDuck = new MallardDuck();
 

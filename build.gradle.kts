@@ -29,7 +29,8 @@ val projects = mapOf(
     "StartupAbstractFactory" to "factory.abstractFactory.StartupAbstractFactory",
     "Singleton" to "singleton.enumSingleton.SingletonClient",
     "RemoteControl" to "command.simpleremote.RemoteControlTest",
-    "PartyRemoteControl" to "command.party.RemoteLoader"
+    "PartyRemoteControl" to "command.party.RemoteLoader",
+    "TurkeyTestDrive" to "adapter.ducks.TurkeyTestDrive"
 )
 
 projects.forEach { (name, mainClassName) ->
