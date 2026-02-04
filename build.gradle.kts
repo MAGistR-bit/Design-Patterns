@@ -30,8 +30,11 @@ val projects = mapOf(
     "Singleton" to "singleton.enumSingleton.SingletonClient",
     "RemoteControl" to "command.simpleremote.RemoteControlTest",
     "PartyRemoteControl" to "command.party.RemoteLoader",
-    "TurkeyTestDrive" to "adapter.ducks.TurkeyTestDrive"
+    "TurkeyTestDrive" to "adapter.ducks.TurkeyTestDrive",
+    "EnumerationIterator" to "adapter.iteration.EnumerationIteratorTestDrive",
 )
+
+val appArgs: String? by project
 
 projects.forEach { (name, mainClassName) ->
     tasks.register<JavaExec>("run$name") {
@@ -40,6 +43,12 @@ projects.forEach { (name, mainClassName) ->
 
         mainClass = mainClassName
         classpath = sourceSets.main.get().runtimeClasspath
+
+        // Безопасная обработка аргументов
+        appArgs?.split(";")
+            ?.map { it.trim() }
+            ?.filter { it.isNotEmpty() }
+            ?.forEach { args(it) }
     }
 }
 
