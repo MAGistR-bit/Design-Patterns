@@ -15,7 +15,7 @@ lint:
 run-with-args:
 	@if [ -z "$$appName" ] || [ -z "$$appArgs" ]; then \
 		echo "Error: appName and appArgs must be set. Example:"; \
-		echo "  make run-with-args appName=EnumerationIterator appArgs='12; \"hello world\";42'"; \
+		echo "  make run-with-args appName=EnumerationIterator appArgs='12; hello world; 42'"; \
 		exit 1; \
 	fi
 	./gradlew run$$appName -PappArgs="$$appArgs"
