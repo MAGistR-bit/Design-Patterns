@@ -30,7 +30,8 @@ ___
 
 **_Структурные (Structural Patterns):_**
 1) Декоратор (Decorator).
-2) Адаптер (Adapter)
+2) Адаптер (Adapter).
+3) Фасад (Facade).
 
 ---
 
@@ -45,6 +46,7 @@ ___
 | 5  |               Одиночка               |                                                                                                                       **_Паттерн Одиночка_** гарантирует, что класс имеет только один экземпляр, и предоставляет глобальную точку доступа к этому экземпляру.                                                                                                                        |     [Заметки к паттерну "Одиночка"](src/main/java/singleton/Chapter5.md)      |  [Chocolate Boiler](src/main/java/singleton/chocolateWithEnum)  |                                             <img src="src/main/java/singleton/diagram/Singleton-Diagram.png">                                              |
 | 6  |               Команда                |                                                                                             Инкапсулирует запрос в виде объекта, делая возможной параметризацию клиентских объектов с другими запросами, организацию очереди и регистрацию запросов, а также поддержку отмены операций.                                                                                              |       [Заметки к паттерну "Команда"](src/main/java/command/Chapter6.md)       | [Remote Control](src/main/java/command/party/RemoteLoader.java) |                                             <img src="src/main/java/command/diagram/Command-UML-Diagram.png">                                              |
 | 7  |               Адаптер                |                                                                                **Паттерн Адаптер** преобразует интерфейс класса к другому интерфейсу, на который рассчитан клиент. Адаптер обеспечивает совместную работу классов, невозможную в обычных условиях из-за несовместимости интерфейсов.                                                                                 |       [Заметки к паттерну "Адаптер"](src/main/java/adapter/Chapter7.md)       |         [Adapter Design Pattern](src/main/java/adapter)         |       <img src="src/main/java/adapter/diagram/Diagram_Adapter_Design_Pattern.png"><br/> <img src="src/main/java/adapter/diagram/ObjectAdapter.png">        |
+| 8  |                Фасад                 |                                                                                                                                                                                         todo                                                                                                                                                                                         |  [Заметки к паттерну "Фасад"](src/main/java/facade/Facade_Design_Pattern.md)  |                           [Facade]()                            |                                                                           image                                                                            |
 ___
 
 ### 🚀 Как запустить программный код?
