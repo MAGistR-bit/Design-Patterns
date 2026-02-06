@@ -14,7 +14,8 @@
 1. [Паттерны проектирования](#-паттерны-проектирования)
 2. [Классификация паттернов](#-классификация-паттернов)
 3. [Как запустить исходный код?](#-как-запустить-программный-код)
-4. [Модульные тесты](#-модульные-тесты)
+4. [Запуск приложения с аргументами командной строки](#-запуск-приложения-с-аргументами-командной-строки)
+5. [Модульные тесты](#-модульные-тесты)
 ___
 
 ### 🤖 Классификация паттернов
@@ -61,6 +62,7 @@ make help
 #  make run-X          - Launch project (example, make run-Ducks)
 #  make test           - Run the tests
 #  make lint           - Check the code style
+#  make run-with-args  - Run application with the arguments
 ```
 
 Для того чтобы запустить программный код, расположенный, допустим, в пакете `ducks`,
@@ -78,6 +80,26 @@ make run-Ducks
 следующую команду:
 ```bash
 ./gradlew runDucks > example.txt
+```
+
+### 🎮 Запуск приложения с аргументами командной строки
+Чтобы запустить приложение с аргументами командной строки,
+следует воспользоваться Make-командной `run-with-args`.  
+
+**Пример использования:**
+```bash
+make run-with-args appName=EnumerationIterator appArgs='12; hello world; grizzly' 
+```
+**Результат выполнения:**
+```textmate
+$ make run-with-args appName=EnumerationIterator appArgs='12; hello world; grizzly'
+./gradlew run$appName -PappArgs="$appArgs"
+
+> Task :runEnumerationIterator
+12
+hello world
+grizzly
+
 ```
 
 ### ▶️ Модульные тесты
